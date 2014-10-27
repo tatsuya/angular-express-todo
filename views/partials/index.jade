@@ -1,0 +1,7 @@
+p There are {{todos.length}} todos
+div(ng-repeat="todo in todos")
+  input(type="checkbox", ng-checked="todo.completed", ng-click="toggleTodo(todo)")
+  label(ng-class="{ completed: todo.completed }") {{todo.title}} 
+  a(href="/editTodo/{{todo.id}}") Edit
+  |  - 
+  a(href="/deleteTodo/{{todo.id}}") Delete
